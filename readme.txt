@@ -1,0 +1,1 @@
+This is my first node application lanmate2!
