@@ -28,12 +28,13 @@ router.delete('/deleteuser/:id', function(req, res){
 	});
 });
 
-/* UPDATE User */
+/* Modify User */
 router.put('/modifyuser/:id', function(req, res){
 	var db = req.db;
-	db.collection('userlist').update({_id: req.params.id}, req.body, {strict: true}, function(err, result){
+	var userToModify = req.params.id;
+	db.collection('userlist').updateById(userToModify, {$set: req.body}, function(err, result){
 		res.send(
-			(err === null) ? { msg: '' } : { msg: err }
+			(err === null) ? { msg: '' } : { msg: 'Update error!' }
 			);
 	});
 });

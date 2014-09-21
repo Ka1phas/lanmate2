@@ -210,12 +210,12 @@ function showModifyUser(event){
 
 		// If it is, compile all user info into one object
 		var modifiedUser = {
-			'username': $('#modifyUser fieldset input#modifyUserName').val(),
-			'email': $('#modifyUser fieldset input#modifyUserEmail').val(),
-			'fullname': $('#modifyUser fieldset input#modifyUserFullName').val(),
-			'age': $('#modifyUser fieldset input#modifyUserAge').val(),
-			'location': $('#modifyUser fieldset input#modifyUserLocation').val(),
-			'gender': $('#modifyUser fieldset input#modifyUserGender').val()
+				username: $('#modifyUser fieldset input#modifyUserName').val(),
+				email: $('#modifyUser fieldset input#modifyUserEmail').val(),
+				fullname: $('#modifyUser fieldset input#modifyUserFullName').val(),
+				age: $('#modifyUser fieldset input#modifyUserAge').val(),
+				location: $('#modifyUser fieldset input#modifyUserLocation').val(),
+				gender: $('#modifyUser fieldset input#modifyUserGender').val()
 		}
 
 		// Use AJAX to post the object to our adduser service
